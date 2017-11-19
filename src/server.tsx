@@ -35,7 +35,7 @@ const Html = (props: { path: string, assets: string[] }) => {
             {js.map(path =>
                 <script src={'/'+path}/>  
             )}
-            <script async dangerouslySetInnerHTML={{__html: "window.homepageStart()"}}></script>
+            <script async dangerouslySetInnerHTML={{__html: "window.main()"}}></script>
         </body>
     </html>
 }

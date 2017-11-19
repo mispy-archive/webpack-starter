@@ -1,7 +1,7 @@
 interface Window {
-    homepageStart: Function
+    main: Function
 }
 
-window.homepageStart = function () {
+window.main = function () {
     document.body.innerHTML = "Hello world"
 }

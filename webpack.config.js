@@ -4,7 +4,6 @@ const StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin'
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const fs = require('fs')
-const fm = require('front-matter')
 
 const isProduction = process.argv.indexOf('-p') !== -1;
 
