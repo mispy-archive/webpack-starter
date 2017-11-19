@@ -11,7 +11,7 @@ import * as d3_chromatic from 'd3-scale-chromatic'
 
 declare var require: any
 const faviconImg = require('./favicon.png')
-const styles = require('./index.css')
+const styles = require('./server.css')
 
 class Body extends React.Component<{path: string, assets: string[]}> {
     content() {
@@ -24,7 +24,7 @@ class Body extends React.Component<{path: string, assets: string[]}> {
 
     render() {
         const {assets} = this.props
-        const js = assets.filter(value => value.match(/\.js$/))
+        const js = assets.filter(value => value.match(/client\.js$/))
 
         return <body>
             <Helmet title="Jaiden Mispy"/>

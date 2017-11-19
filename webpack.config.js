@@ -10,10 +10,13 @@ const isProduction = process.argv.indexOf('-p') !== -1;
 
 module.exports = {
     context: __dirname,    
-    entry: path.join(__dirname, 'src/index.tsx'),
+    entry: {
+        server: path.join(__dirname, 'src/server.tsx'),
+        client: path.join(__dirname, 'src/client.tsx')
+    },
     output: {
         path: path.join(__dirname, 'build'),
-        filename: (isProduction ? 'assets/main.[chunkhash].js' : 'assets/main.js'),
+        filename: (isProduction ? 'assets/[name].[chunkhash].js' : 'assets/[name].js'),
         libraryTarget: 'umd'
     },
     resolve: {
